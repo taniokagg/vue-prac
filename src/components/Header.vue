@@ -52,7 +52,7 @@
             ニュースタイトルがここには入ります。3月の決算報告書
           </p>
         </div>
-        <div class="news-icon">news</div>
+        <div class="news-icon"></div>
         </div>
       </div>
   </div>
@@ -110,9 +110,13 @@ export default {
   height: 100vh;
 }
 
+
+
 #firstview {
-  height: 100vh;
-  background: url(/Users/butbutabute/Desktop/pra-lp-vue/src/assets/eyecatch.jpg) no-repeat;
+  /* headerの高さ引く */
+  height: calc(100vh - 70px);
+  /* パス修正 */
+  background: url(../assets/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
