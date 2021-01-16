@@ -453,7 +453,7 @@ text-align: center;
   color: #fff;
 }
 
-recruit-company img {
+.recruit-company img {
   position: relative;
 }
 
