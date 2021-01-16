@@ -278,7 +278,7 @@ body {
 
 #firstview {
   height: 100%;
-  background: url(./assets/eyecatch.jpg) no-repeat;
+  background: url(/Users/butbutabute/Desktop/pra-lp-vue/src/assets/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -333,7 +333,7 @@ body {
   position: relative;
   background: #000;
   margin-bottom: 10%;
-  z-index: 999;
+  z-index: 500;
 }
 
 .mission-content {

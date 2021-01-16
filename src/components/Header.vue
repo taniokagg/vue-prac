@@ -25,7 +25,7 @@
         </div>
         <div class="news-icon">news</div>
       </div>
-        <div id="hamburger" @click="hamburger" :class="{'active':isClass}">
+        <div id="hamburger" @click="hamburger()" :class="{'active':isClass}">
           <span></span>
           <span></span>
           <span></span>
@@ -64,7 +64,7 @@ export default {
     };
   },
   methods: {
-    hamuburger() {
+    hamburger() {
       this.isClass = !this.isClass;
     }
   }
@@ -72,40 +72,41 @@ export default {
 </script>
 
 <style scoped>
-/*------------------------*/
-/*         header         */
-/*------------------------*/
-#hamburger {
-  display: none;
+.header {
+  height: 70px;
+  background: #000;
 }
 
-#top-header {
-  height: 70px;
-  line-height: 70px;
-  background: rgba(0, 0, 0, 1);
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-logo {
   font-size: 20px;
   font-weight: bold;
   margin-left: 35px;
-  color: #fff;
+  color: #f2f2f2;
   line-height: 70px;
 }
 
+.header-nav ul {
+  display: flex;
+}
+
 .header-nav li {
-  display: inline-block;
   margin-right: 35px;
   font-size: 16px;
 }
 
 .header-nav a {
-  color: #fff;
+  color: #f2f2f2;
 }
 
 #firstview {
   height: 100%;
-  background: url(./assets/eyecatch.jpg) no-repeat;
+  background: url(/Users/butbutabute/Desktop/pra-lp-vue/src/assets/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -121,6 +122,87 @@ export default {
   color: #fff;
   line-height: 1;
 }
+@media screen and (max-width: 768px) {
+  #hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2147483647;
+    top: 15px;
+    right: 20px;
+    transition: 0.4s;
+  }
+  #hamburger span {
+    position: absolute;
+    left: 2px;
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.8s;
+  }
+  #hamburger span:nth-of-type(1) {
+    top: 10px;
+  }
+  #hamburger span:nth-of-type(2) {
+    top: 20px;
+  }
+  #hamburger span:nth-of-type(3) {
+    top: 30px;
+  }
+  .header-nav {
+    display: none;
+  }
 
+  /* ここを追加 */
+  #hamburger.active span:nth-of-type(1) {
+    top: 20px;
+    transform: rotate(45deg);
+  }
 
+  #hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamburger.active span:nth-of-type(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+  .menu-content {
+    display: block;
+    width: calc(100% - 80px);
+    height: 100%;
+    text-align: center;
+    transition: 0.2s;
+    position: fixed;
+    top: 0;
+    left: calc(-100% - 80px);
+    background: #fff;
+    color: #333333;
+    box-shadow: 80px 0 rgba(38, 98, 213, 0.3);
+    z-index: 999;
+  }
+  .menu-content .menu-title {
+    margin: 40px 20px;
+    font-size: 2.2rem;
+    color: #333333;
+    text-align: left;
+    font-weight: bold;
+  }
+  .menu-content li a {
+    color: #333333;
+    margin: 15px;
+    padding: 5px;
+    border-bottom: 0.5px solid #2662d5;
+    text-decoration: none;
+    display: block;
+  }
+  .menu-content li {
+    width: 100%;
+    text-align: left;
+  }
+  .menu-content.open {
+    left: 0;
+  }
+}
 </style>
