@@ -1,5 +1,5 @@
 <template>
-    <div id="firstview">
+  <div id="HeaderAll">
       <header id="top-header">
         <div class="flex">
           <h1 class="header-logo">estra inc.</h1>
@@ -14,17 +14,6 @@
             </ul>
           </nav>
         </div>
-      </header>
-      <p class="catchcopy">機械ではできない仕事を</p>
-      <div class="news flex">
-        <div class="news-content">
-          <p class="news_date">2019/01/01</p>
-          <p class="news_title">
-            ニュースタイトルがここには入ります。3月の決算報告書
-          </p>
-        </div>
-        <div class="news-icon">news</div>
-      </div>
         <div id="hamburger" @click="hamburger()" :class="{'active':isClass}">
           <span></span>
           <span></span>
@@ -53,6 +42,19 @@
             </li>
           </ul>
         </nav>
+      </header>
+    <div id="firstview">
+      <p class="catchcopy">機械ではできない仕事を</p>
+      <div class="news flex">
+        <div class="news-content">
+          <p class="news_date">2019/01/01</p>
+          <p class="news_title">
+            ニュースタイトルがここには入ります。3月の決算報告書
+          </p>
+        </div>
+        <div class="news-icon">news</div>
+        </div>
+      </div>
   </div>
 </template>
 
