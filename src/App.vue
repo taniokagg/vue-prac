@@ -45,11 +45,13 @@
           </div>
         </div>
       </div>
-      <div class="company">
+      <div class="">
         <div class="recruit-company" v-for="(data,index) in company" :key="index">
           <img :src="data.img">
+          <div company-content>
           <h2>{{data.h2}}</h2>
           <p>{{data.p}}</p>
+          </div>
         </div>
       </div>
       <div class="faq">
@@ -425,13 +427,21 @@ body {
 display: block;
 background-color: pink;
 text-align: center;
-position: relative;
+
 }
 
-.recruit-company img {
+/* .recruit-company img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+} */
+
+
+.recruit-company_size {
+  width: 48%;
+  height: 300px;
+  position: relative;
 }
 
 .recruit-company h2 {
@@ -443,18 +453,16 @@ position: relative;
   color: #fff;
 }
 
-.recruit-company_size {
-  width: 48%;
-  height: 300px;
+recruit-company img {
   position: relative;
 }
 
-.company-img {
-  background: url(./assets/company.jpeg) center/cover no-repeat;
-}
-
-.recruit-img {
-  background: url(./assets/recruit.jpg) center/cover no-repeat;
+.company-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
 }
 
 .company-title {
@@ -545,10 +553,12 @@ position: relative;
   .header-nav {
     display: none;
   }
+  
   .catchcopy {
+    position: absolute;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
   }

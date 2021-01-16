@@ -52,7 +52,7 @@
             ニュースタイトルがここには入ります。3月の決算報告書
           </p>
         </div>
-        <div class="news-icon"></div>
+        <div class="news-icon">news</div>
         </div>
       </div>
   </div>
@@ -122,7 +122,6 @@ export default {
   position: relative;
 }
 
-
 .catchcopy {
   position: absolute;
   top: 60%;
@@ -133,7 +132,45 @@ export default {
   color: #fff;
   line-height: 1;
 }
+
+.news-content {
+  background: #fff;
+  width: 80%;
+  height: 70px;
+}
+
+.news_date {
+  padding: 5px 0;
+  padding-left: 5px;
+
+}
+
+.news_title {
+  padding: 3px 15px;
+}
+.news-icon {
+  background: #000;
+  width: 20%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+}
+
+
 @media screen and (max-width: 768px) {
+  #firstview {
+    position: relative;
+  }
+  .catchcopy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
   #hamburger {
     width: 40px;
     height: 40px;
