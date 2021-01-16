@@ -106,13 +106,18 @@ export default {
   color: #f2f2f2;
 }
 
+#HeaderAll {
+  height: 100vh;
+}
+
 #firstview {
-  height: 100%;
+  height: 100vh;
   background: url(/Users/butbutabute/Desktop/pra-lp-vue/src/assets/eyecatch.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
 }
+
 
 .catchcopy {
   position: absolute;
@@ -173,7 +178,6 @@ export default {
   .menu-content {
     display: block;
     width: calc(100% - 80px);
-    height: 100%;
     text-align: center;
     transition: 0.2s;
     position: fixed;

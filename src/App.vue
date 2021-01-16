@@ -46,9 +46,10 @@
         </div>
       </div>
       <div class="company">
-        <div class="recruit-company flex" v-for="(data,index) in company" :key="index">
+        <div class="recruit-company" v-for="(data,index) in company" :key="index">
           <img :src="data.img">
-          <h2>{{data.title}}</h2>
+          <h2>{{data.h2}}</h2>
+          <p>{{data.p}}</p>
         </div>
       </div>
       <div class="faq">
@@ -80,13 +81,13 @@ export default {
       company: [
         {
           img: require("./assets/company.jpeg"),
-          title: "company",
-          h2: "会社概要"
+          h2: "company",
+          p: "会社概要"
         },
         {
           img: require("./assets/recruit.jpg"),
-          title: "recruit",
-          h2: "採用情報"
+          h2: "recruit",
+          p: "採用情報"
         }
       ]
     };
@@ -120,7 +121,12 @@ time, mark, audio, video {
   background:transparent;
 }
 
+html {
+  /* height: 100%; */
+}
+
 body {
+  /* height: 100%; */
   line-height:1;
 }
 
@@ -194,9 +200,6 @@ input, select {
   vertical-align:middle;
 }
 
-html {
-  height: 100%;
-}
 
 a {
   color: #333333;
@@ -218,7 +221,7 @@ img {
 
 body {
   color: #333333;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .mgb-15 {
@@ -244,6 +247,7 @@ body {
 .section-title span {
   font-size: 20px;
 }
+
 
 /*------------------------*/
 /*         header         */
@@ -276,6 +280,10 @@ body {
   color: #fff;
 }
 
+#HeaderAll {
+  height: 100%;
+}
+
 #firstview {
   height: 100%;
   background: url(/Users/butbutabute/Desktop/pra-lp-vue/src/assets/eyecatch.jpg) no-repeat;
@@ -303,6 +311,7 @@ body {
   bottom: 0;
   right: 0;
   width: 50%;
+  height: 100vh;
 }
 .news-content {
   background: #fff;
@@ -411,6 +420,28 @@ body {
 /*------------------------*/
 .company {
   margin-bottom: 10%;
+}
+
+.recruit-company{
+display: block;
+background-color: pink;
+text-align: center;
+position: relative;
+}
+
+.recruit-company img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recruit-company h2 {
+  font-size: 40px;
+  color: #fff;
+}
+.recruit-company p{
+  font-size: 20px;
+  color: #fff;
 }
 
 .recruit-company_size {
