@@ -45,10 +45,10 @@
           </div>
         </div>
       </div>
-      <div class="">
+      <div class="company">
         <div class="recruit-company" v-for="(data,index) in company" :key="index">
+          <div class="company-content">
           <img :src="data.img">
-          <div company-content>
           <h2>{{data.h2}}</h2>
           <p>{{data.p}}</p>
           </div>
@@ -421,21 +421,13 @@ body {
 /*------------------------*/
 .company {
   margin-bottom: 10%;
+  /* display: flex; */
 }
 
 .recruit-company{
-display: block;
-background-color: pink;
 text-align: center;
-
+display: flex;
 }
-
-/* .recruit-company img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-} */
 
 
 .recruit-company_size {
@@ -447,10 +439,21 @@ text-align: center;
 .recruit-company h2 {
   font-size: 40px;
   color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
 }
 .recruit-company p{
   font-size: 20px;
   color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+padding-top: 90px;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
 }
 
 .recruit-company img {
@@ -458,13 +461,14 @@ text-align: center;
 }
 
 .company-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
+  position: relative;
+  width: 50%;
+  /* display: block; */
 }
 
+.company-content img {
+height: 48vh;
+}
 .company-title {
   text-align: center;
   color: #fff;
@@ -486,6 +490,7 @@ text-align: center;
   background: #000;
   margin: 0 auto 10%;
   padding: 50px;
+  /* padding */
 }
 
 .faq-title,
