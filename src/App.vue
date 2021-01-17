@@ -295,6 +295,7 @@ body {
 }
 
 .catchcopy {
+  
   position: absolute;
   top: 60%;
   left: 10%;
@@ -420,13 +421,15 @@ body {
 /*        recruit         */
 /*------------------------*/
 .company {
+  width: 100vw;
   margin-bottom: 10%;
-  /* display: flex; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .recruit-company{
 text-align: center;
-display: flex;
+/* display: flex; */
 }
 
 
@@ -462,7 +465,7 @@ padding-top: 90px;
 
 .company-content {
   position: relative;
-  width: 50%;
+  width: 48vw;
   /* display: block; */
 }
 
@@ -566,6 +569,7 @@ height: 48vh;
     width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
+    width: 10vw;
   }
   .news {
     width: 100%;
@@ -645,5 +649,13 @@ height: 48vh;
     top: 30px;
     left: 2px;
   }
+
+.company {
+  display: block;
+
+}
+.company-content {
+  width: 100vw;
+}
 }
 </style>
